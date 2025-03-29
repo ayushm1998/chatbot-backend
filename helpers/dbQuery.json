@@ -1,0 +1,12 @@
+{
+    "Student": {
+    "getStudentData": "select * from studentData where StudentId= %L",
+    "checkUser": "select Last_Name_Preferred, First_Name_Preferred from studentData where StudentId= %L",
+    "getAdmissionDecision":"select Program_Action from studentData where StudentId= %L",
+    "getHolds":"select Service_Indicator from studentData where StudentId= %L",
+    "getStudentId":"select StudentId from studentData where Email=%s"    
+  },
+  "login":{
+    "checkUser":"select * from ipgeData where emailId='%s'"
+  }
+}

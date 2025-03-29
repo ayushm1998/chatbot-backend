@@ -1,0 +1,16 @@
+{
+    "Student": {
+      "student_not_found": "Student not found",
+      "no_holds":"No Holds associated with your account",
+      "student_doesnt_exist":"Student with this Student Id doesn't exist",
+      "Not_Authorized":"You are not able to view data other then yours",
+      "no_user":"No student with this Student Id, Please check and try again"
+    },
+    "login":
+    {
+      "Invalid_User":"Invalid User",
+      "Invalid_Credentials":"Invalid Password, Please check Credentials"
+      
+
+    }
+}

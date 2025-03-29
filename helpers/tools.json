@@ -1,0 +1,107 @@
+[
+    {
+      "type": "function",
+      "function": {
+        "name": "getStudentId",
+        "description": "Call this function everytime the chat starts this gets the studentId for the logged in user to feed to it all other functions.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "user": {
+              "type": "object",
+              "description": "User Authentication token"
+            }
+          },
+          "required": ["user"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "checkIfUserExist",
+        "description":
+          "Call this function everytime the chat starts and user provide Student ID to know if it is a valid student id or not If yes it will return First Name and Last Name if not will return Not Exist error",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "number",
+              "description":
+                "Student Id Eg. 123, ask for Student Id if not given by user"
+            },
+            "user": {
+              "type": "object",
+              "description": "User Authentication token"
+            }
+          },
+          "required": ["studentId", "user"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "getAdmissionDecision",
+        "description":
+          "Call this if user asks for their admission decision, it can be either Matriculated, Decline, or Under Review if blank then student doesn't exist. Get the student id from getStudentId function, if the logged in user is not Admin, If looged in user is admin then ask which students data they want to know about",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "number",
+              "description":
+                "Student Id Eg. 302236233, get the studentId from getStudwentId function if the logged in user is not Admin, If looged in user is admin then ask which students data they want to know about"
+            },
+            "user": {
+              "type": "object",
+              "description": "User Authentication token"
+            }
+          },
+          "required": ["studentId", "user"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "getStudentInfo",
+        "description":
+          "Call this if user asks for Student data like Visa, Status, GPA, Address, Current Loads etc, For a logged in user who is not admin, get student Id from getStudentId function. If looged in user is admin then ask which students data they want to know about",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "number",
+              "description":
+                "Student Id Eg. 123, get the studentId from getStudwentId function if the logged in user is not Admin, If looged in user is admin then ask which students data they want to know about"
+            },
+            "user": {
+              "type": "object",
+              "description": "User Authentication token"
+            }
+          },
+          "required": ["studentId", "user"]
+        }
+      }
+    },
+
+    {
+      "type": "function",
+      "function": {
+        "name": "getHolds",
+        "description": "Call this if user asks for holds on their account, get student Id from getStudentId function if logged in user is not Admin, If looged in user is admin then ask which students data they want to know about",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "studentId": {
+              "type": "number",
+              "description":
+                "Student Id Eg. 302236233 (Should be nine digit), get the studentId from getStudwentId function if the logged in user is not Adminr, If looged in user is admin then ask which students data they want to know about"
+            }
+          },
+          "required": ["studentId"]
+        }
+      }
+    }
+  ]
