@@ -11,10 +11,8 @@ const dbConnection = require("./utils/dbConnection");
 
 const { openAICall, login } = require("./routes");
 
-app.use("/bot", openAICall);
-
-app.use("/login", login);
-
+app.use("/api/bot", openAICall);
+app.use("/api/login", login);
 app.post("/api/logout", (req, res) => {
   res.clearCookie("token");
   res.status(200).json({ message: "Logged out successfully" });
