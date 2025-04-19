@@ -42,7 +42,7 @@ const conditionalCall = (history, user) => {
             if (functionName === "getStudentId") {
               functionResponse = await getStudentId(user);
             }
-            if (functionName === "getStudentInfo") {
+            else if (functionName === "getStudentInfo") {
               functionResponse = await getStudentInfo(
                 functionArgs.studentId,
                 user

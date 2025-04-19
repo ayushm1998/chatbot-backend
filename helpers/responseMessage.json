@@ -4,7 +4,7 @@
       "no_holds":"Currently, there are no Holds associated with your account",
       "student_doesnt_exist":"Student with this Student Id doesn't exist",
       "Not_Authorized":"Sorry! But due to security compliants I am only able to show data related to you.",
-      "no_user":"No student with this Student Id, Please check and try again"
+      "no_user":"Can you please provide a correct student id"
     },
     "login":
     {
