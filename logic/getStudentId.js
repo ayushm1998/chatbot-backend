@@ -10,13 +10,13 @@ const getStudentId = (user) => {
     try {
       const userInfo = jwtDecode(user);
       let formattedquery = format(dbQuery.Student.getStudentId, userInfo.email);
-      let studentId = await dbrequest(formattedquery).catch((err) =>
+      let studentInfo = await dbrequest(formattedquery).catch((err) =>
         reject(err)
       );
-      if (studentId.length === 0) {
+      if (studentInfo.length === 0) {
         reject(responseMessage.Student.no_user);
       } else {
-        resolve(JSON.stringify(studentId));
+        resolve(JSON.stringify(studentInfo));
       }
     } catch (err) {
       reject(err.message);

@@ -3,7 +3,7 @@
       "type": "function",
       "function": {
         "name": "getStudentId",
-        "description": "Call this function everytime the chat starts this gets the studentId for the logged in user to feed to it all other functions.",
+        "description": "Call this function everytime the the chat session starts to feed studentId to all other functions, if the user is not Admin",
         "parameters": {
           "type": "object",
           "properties": {

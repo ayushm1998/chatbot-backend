@@ -1,9 +1,9 @@
-function failureResponse(status, message, statusCode) {
+function failureResponse( message, statusCode) {
   //Standard pattern for failure or invalid reponse
   return {
     statusCode: statusCode,
     body: {
-      status: status,
+    
       message: message,
       timestamp: Date(),
     },

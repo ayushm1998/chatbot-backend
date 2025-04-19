@@ -8,7 +8,7 @@ const openAICallResponse = async (req, res) => {
         let history = req.body.history
         let user = req.body.user.token
         let botResponse = await openAICall(history,user).catch(error => {
-            let failure = failureResponse(statusCodes.BAD_REQUEST.status, error, statusCodes.BAD_REQUEST.statusCode)
+            let failure = failureResponse( error, statusCodes.BAD_REQUEST.statusCode)
             res.status(failure.statusCode).send(failure.body)
         })
         if (botResponse) {

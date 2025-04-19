@@ -17,7 +17,6 @@ const getHolds = (studentId, user) => {
         if (holdsList.length === 0) {
           reject(responseMessage.Student.no_holds);
         } else {
-          console.log(holdsList);
           resolve(JSON.stringify(holdsList[0]));
         }
       } else {
